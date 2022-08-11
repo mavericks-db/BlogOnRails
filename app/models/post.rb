@@ -11,5 +11,5 @@ class Post < ApplicationRecord
     comments.limit(5).order(created_at: :desc)
   end
 
-  validates :title, presence: true
+  validates :title, presence: true, length: { maximum: 250 }
 end
