@@ -10,4 +10,6 @@ class Post < ApplicationRecord
   def recent_5_comments
     comments.limit(5).order(created_at: :desc)
   end
+
+  validates :title, presence: true
 end
