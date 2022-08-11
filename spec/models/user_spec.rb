@@ -24,7 +24,7 @@ RSpec.describe User, type: :model do
       expect(first_user).to be_valid
     end
 
-    it 'is not valid if posts_counter is not integer' do
+    it 'is not valid if posts_counter is not an integer' do
       first_user.posts_counter = 'Balitaan'
       expect(first_user).to_not be_valid
     end
@@ -47,7 +47,7 @@ RSpec.describe User, type: :model do
       expect(number_of_posts).to be 1
     end
 
-    it 'returns 3 for three post' do
+    it 'returns 3 for three posts' do
       second_post.save
       third_post.save
       fourth_post.save
