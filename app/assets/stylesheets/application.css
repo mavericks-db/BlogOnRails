@@ -30,7 +30,7 @@
   margin: 1rem;
   padding: 1rem;
 }
-
+/* User Card CSS Props */
 .user-card {
   display: flex;
   flex-direction: row;
@@ -39,7 +39,7 @@
   padding: 1rem;
   margin: 1rem auto;
   width: 80%;
-  box-shadow: 0 0.1rem 0.5rem #0001;
+  box-shadow: 0 0.1rem 0.5rem black;
 }
 
 .user-photo {
@@ -57,11 +57,61 @@
 }
 
 .user-info h3 {
-  float: right;
   margin: 8rem 1rem 1rem 0;
-
+  text-align: right;
 }
 
 h2 {
   font-size: 2.5rem;
+}
+/* User Bio Card CSS Props */
+.bio-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 1rem auto;
+  width: 80%;
+  box-shadow: 0 0.1rem 0.5rem black;
+}
+
+.bio-card p {
+  font-style: italic;
+  margin: 1rem 0 0 0;
+}
+
+/* Post Card CSS Props */
+.post-show {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.post-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 1rem auto;
+  width: 80%;
+  box-shadow: 0 0.1rem 0.5rem black;
+}
+
+.post-content {
+  margin: 1rem 0 0 5rem;
+  text-align: left;
+  height: 100%;
+}
+
+.post-stats {
+  margin: 8rem 1rem 0 0;
+  width: 100%;
+  text-align: right;
+}
+
+button {
+  padding: 0.5rem;
+  max-width: fit-content;
 }
