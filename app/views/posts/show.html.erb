@@ -1,1 +1,1 @@
-<h1>Post of the user is shown here</h1>
+<%= render partial: 'post_details', locals: { post: @post, comments: @post.recent_5_comments} %>
