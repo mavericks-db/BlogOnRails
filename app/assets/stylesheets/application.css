@@ -18,8 +18,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: #041C32;
-  background-color: #EBECF1;
+  color: #041c32;
+  background-color: #ebecf1;
 }
 
 .container {
@@ -30,6 +30,7 @@
   margin: 1rem;
   padding: 1rem;
 }
+
 /* User Card CSS Props */
 .user-card {
   display: flex;
@@ -46,7 +47,7 @@
   width: 250px;
   height: 200px;
   border: 1px solid black;
-  background-color: #ECB365;
+  background-color: #ecb365;
 }
 
 .user-info {
@@ -64,6 +65,7 @@
 h2 {
   font-size: 2.5rem;
 }
+
 /* User Bio Card CSS Props */
 .bio-card {
   display: flex;
@@ -112,7 +114,7 @@ h2 {
 
 button {
   padding: 0.5rem;
-  max-width: fit-content;
+  max-width: 10rem;
   align-self: center;
 }
 
@@ -135,4 +137,15 @@ button {
 
 .comment-content {
   font-style: italic;
+}
+
+/* Post Details Card CSS Props */
+.post-header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.post-header h2 {
+  width: 50%;
 }
