@@ -1,9 +1,1 @@
-<div class="new-post">
-  <%= form_with model: @post, url: user_posts_path, method: :post, class: 'form' do |f| %>
-    <h2><%= f.label :title, 'Post Title' %></h2>
-    <%= f.text_field :title %>
-    <h2><%= f.label :text, 'Post Content' %></h2>
-    <%= f.text_area :text %>
-    <button><%= f.submit "Add Post" %></button>
-  <% end %>
-</div>
+<%= render partial: 'posts/new_post_form', locals: { user: @user } %>
