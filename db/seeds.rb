@@ -7,14 +7,14 @@
 # Character.create(name: "Luke", movie: movies.first)
 
 p "Seeding..."
-users = User.create([{name: 'Tom', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Mexico.',
+users = User.create([{name: 'Mavericks', photo: 'https://picsum.photos/200/300', bio: 'Teacher from Mexico.',
 posts_counter: 0},
-{name: 'Lilly', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Poland.', posts_counter: 0}])
+{name: 'Lilly', photo: 'https://picsum.photos/300/200', bio: 'Teacher from Poland.', posts_counter: 0}])
 
-posts = Post.create([{user: users.first, title: 'Hello', text: 'This is my first post', comments_counter: 0,
+posts = Post.create([{user: users[1], title: 'Hello', text: 'This is my first post', comments_counter: 0,
 likes_counter: 0},
-{user: users.first, title: 'Hello', text: 'This is my second post', comments_counter: 0, likes_counter: 0},
-{user: users.first, title: 'Hello', text: 'This is my long post. Hi Tom!
+{user: users[1], title: 'Hello', text: 'This is my second post', comments_counter: 0, likes_counter: 0},
+{user: users[1], title: 'Hello', text: 'This is my long post. Hi Mavericks!
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec arcu odio. Nulla feugiat, ipsum quis facilisis
 vulputate, elit metus vehicula risus, sit amet suscipit mauris sem at est. Aliquam erat volutpat. Vivamus id ligula
 pretium, iaculis risus vitae, eleifend nibh. Donec bibendum pharetra eleifend. Nunc enim ligula, sodales venenatis
@@ -36,6 +36,17 @@ comments = Comment.create([{post: posts.first, user: users[1], text: 'Hi Tom!'},
 {post: posts.first, user: users[1],text: 'Hi Tom! Again'},
 {post: posts.first, user: users[1], text: 'Hi Tom! Thrice'},
 {post: posts[1], user: users[1], text: 'Hi Tom! Four times'}])
+
+users.each do |user|
+  user.posts_counter = user.posts.count
+  user.save
+end
+
+posts.each do |post|
+  post.comments_counter = post.comments.count
+  post.likes_counter = post.likes.count
+  post.save
+end
 
 p "Successfully created #{User.count} users"
 p "Successfully created #{Post.count} posts"

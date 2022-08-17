@@ -1,0 +1,8 @@
+<div class="new-post">
+  <h2>New Comment Form</h2>
+  <%= form_with model: Comment.new, url: comment_create_path, method: :post, class: 'form' do |f| %>
+    <h2><%= f.label :text, 'Comment Content' %></h2>
+    <%= f.text_area :text %>
+    <button><%= f.submit "Add Comment" %></button>
+  <% end %>
+</div>

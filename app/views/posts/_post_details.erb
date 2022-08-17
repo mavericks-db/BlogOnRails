@@ -4,6 +4,10 @@
   <h3 class='post-stats'>Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter %></h3>
   </div>
   <p class='post-content'><%= post.text %></p>
+  <div class='post-buttons'>
+  <button id='post-card-btn'><%= link_to 'Create a new comment', comment_new_path(post.user) %></button>
+  <%= render partial: 'likes/like_button', locals: {post: post} %>
+  </div>
 </div>
 
 <% if comments.any? %>
