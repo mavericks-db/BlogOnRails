@@ -165,3 +165,47 @@ button {
 .post-header h2 {
   width: 100%;
 }
+
+/* New post form CSS props */
+.new-post {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 1rem auto;
+  width: 80%;
+  box-shadow: 0 0.1rem 0.5rem black;
+}
+
+.new-post form {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.new-post form input {
+  background-color: white;
+  padding: 1rem;
+}
+
+.new-post form h2 {
+  margin: 1rem 0 0 0;
+}
+
+.new-post form textarea {
+  margin: 1rem 0 0 0;
+  background-color: white;
+  height: 20rem;
+  padding: 1rem;
+  resize: none;
+}
+
+.new-post form button {
+  padding: 2rem;
+  max-width: 10rem;
+  align-self: center;
+  border: none;
+  margin: 1rem;
+}

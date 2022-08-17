@@ -7,6 +7,6 @@
   <% end %>
   <div class='post-buttons'>
     <button><%= link_to 'See all posts', user_posts_path(@user) %></button>
-    <button>Create a new post</button>
+    <button><%= link_to 'Create a new post', post_new_path(@user) %></button>
   </div>
 </div>
