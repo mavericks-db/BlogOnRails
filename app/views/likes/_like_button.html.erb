@@ -1,0 +1,5 @@
+<div class="new-like">
+  <%= form_with model: Post.new, url: like_create_path, method: :post, class: 'form' do |f| %>
+    <button><%= f.submit "Like this comment" %></button>
+  <% end %>
+</div>

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  post 'users/:user_id/posts/:post_id/create_like', to: 'likes#create', as: 'like_create'
   get 'users/:user_id/:post_id/new_comment', to: 'comments#new', as: 'comment_new'
   post 'users/:user_id/:post_id/create_comment', to: 'comments#create', as: 'comment_create'
   get 'users/:user_id/new_post', to: 'posts#new', as: 'post_new'

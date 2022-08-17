@@ -116,7 +116,7 @@ h2 {
   box-shadow: 0 0.1rem 0.5rem black;
 }
 
-.post-card button {
+#post-card-btn {
   margin: 1rem;
 }
 
@@ -207,6 +207,20 @@ button {
 }
 
 .new-post form button {
+  padding: 2rem;
+  max-width: 10rem;
+  align-self: center;
+  border: none;
+  margin: 1rem;
+}
+
+/* Like Button CSS Props */
+.new-like form input {
+  padding: 0.5rem;
+  margin: 1rem;
+}
+
+.new-like form button {
   padding: 2rem;
   max-width: 10rem;
   align-self: center;
