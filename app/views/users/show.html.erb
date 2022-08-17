@@ -5,5 +5,8 @@
   <% @recent_posts.each do |post| %>
       <%= render partial: 'posts/post_card', locals: { post: post } %>
   <% end %>
-  <button><%= link_to 'See all posts', user_posts_path(@user) %></button>
+  <div class='post-buttons'>
+    <button><%= link_to 'See all posts', user_posts_path(@user) %></button>
+    <button>Create a new post</button>
+  </div>
 </div>
