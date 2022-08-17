@@ -37,6 +37,17 @@ comments = Comment.create([{post: posts.first, user: users[1], text: 'Hi Tom!'},
 {post: posts.first, user: users[1], text: 'Hi Tom! Thrice'},
 {post: posts[1], user: users[1], text: 'Hi Tom! Four times'}])
 
+users.each do |user|
+  user.posts_counter = user.posts.count
+  user.save
+end
+
+posts.each do |post|
+  post.comments_counter = post.comments.count
+  post.likes_counter = post.likes.count
+  post.save
+end
+
 p "Successfully created #{User.count} users"
 p "Successfully created #{Post.count} posts"
 p "Successfully created #{Comment.count} comments"
