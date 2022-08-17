@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def show
-    @post = Post.find(params[:id])
+    @post = Post.find(params[:post_id])
   end
 
   def index
@@ -13,18 +13,18 @@ class PostsController < ApplicationController
   end
 
   def create
-    new_post = Post.new(post_params)
-    new_post.user = current_user
-    new_post.likes_counter = 0
-    new_post.comments_counter = 0
+    @post = Post.new(post_params)
+    @post.user = current_user
+    @post.likes_counter = 0
+    @post.comments_counter = 0
     respond_to do |format|
-      if new_post.save
-        format.html { redirect_to user_posts_path(user: new_post.user), notice: 'Post was successfully created.' }
+      if @post.save
+        format.html { redirect_to user_posts_path(user: @post.user), notice: 'Post was successfully created.' }
       else
         format.html { render :new, alert: 'Post was not created.' }
       end
     end
-    new_post.update_posts_counter
+    @post.update_posts_counter
   end
 
   private

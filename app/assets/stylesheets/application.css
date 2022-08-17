@@ -116,6 +116,10 @@ h2 {
   box-shadow: 0 0.1rem 0.5rem black;
 }
 
+.post-card button {
+  margin: 1rem;
+}
+
 .post-content {
   margin: 1rem 0 0 5rem;
   text-align: left;
