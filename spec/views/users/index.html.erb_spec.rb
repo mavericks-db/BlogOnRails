@@ -16,8 +16,8 @@ RSpec.describe 'users_path', type: :system do
 
     it 'shows the number of posts for each user' do
       visit users_path
-      expect(page).to have_content('0')
-      expect(page).to have_content('3')
+      expect(page).to have_content('Number of posts: 0')
+      expect(page).to have_content('Number of posts: 3')
     end
 
     it 'redirects to that user\'s profile page when clicked' do

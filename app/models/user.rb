@@ -4,7 +4,7 @@ class User < ApplicationRecord
   has_many :likes
 
   def recent_3_posts
-    posts.limit(3).order(created_at: :desc)
+    posts.includes(:user).limit(3).order(created_at: :desc)
   end
 
   validates :name, presence: true
