@@ -20,7 +20,7 @@
   box-sizing: border-box;
 }
 
-.container {
+.wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;

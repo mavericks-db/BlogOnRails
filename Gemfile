@@ -75,3 +75,5 @@ group :development do
 
   gem 'bullet', require: true
 end
+
+gem 'devise'
