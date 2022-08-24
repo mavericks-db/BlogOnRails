@@ -1,3 +1,4 @@
+# require 'faker'
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
 #
@@ -53,3 +54,9 @@ p "Successfully created #{User.count} users"
 p "Successfully created #{Post.count} posts"
 p "Successfully created #{Comment.count} comments"
 p "Seeding finished"
+
+# 4.times do
+#   User.create!(name: Faker::Name.name, photo: 'https://picsum.photos/200/300', bio: Faker::Lorem.paragraph,
+#   email: Faker::Internet.email, password: '123456', password_confirmation: '123456', posts_counter: 0)
+# end
+# p "Successfully created #{User.count} users"

@@ -74,6 +74,8 @@ group :development do
   # gem "spring"
 
   gem 'bullet', require: true
+  gem 'letter_opener_web'
 end
 
 gem 'devise'
+gem 'faker'
