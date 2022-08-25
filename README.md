@@ -68,7 +68,7 @@ To run tests, please run this command
 $ rspec ./spec/#{filename}_spec.rb
 ```
 
-## Author
+## Authors
 
 👤 **Mavericks Balitaan** <img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="20"/>
 
@@ -84,6 +84,16 @@ $ rspec ./spec/#{filename}_spec.rb
 
 - Gmail: [![Gmail Badge](https://img.shields.io/badge/-balitaanmavericks-white?logo=Gmail&logoColor=EA4335&style=plastic)](mailto:balitaanmavericks@gmail.com)
 
+👤 **Mandela Tuks** <img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="20"/>
+
+- GitHub: [![GitHub Badge](https://img.shields.io/badge/-mandelatuks-white?logo=GitHub&logoColor=181717&style=plastic)](https://github.com/mandelatuks)
+
+- Twitter: [![Twitter Badge](https://img.shields.io/badge/-MandelaTm1-white?logo=Twitter&logoColor=1DA1F2&style=plastic)](https://twitter.com/MandelaTm1)
+
+- Gmail: [![Gmail Badge](https://img.shields.io/badge/-manderat206-white?logo=Gmail&logoColor=EA4335&style=plastic)](mailto:manderat206@gmail.com)
+
+
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
@@ -98,6 +108,7 @@ Give a ⭐️ if you like this project!
 
 - [Microverse](https://www.microverse.org/)
 - Code Reviewers
+- Coding Partners
 
 ## 📝 License
 
