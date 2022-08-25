@@ -5,6 +5,9 @@
     <% comments.each do |comment| %>
       <div class='comment-card'>
         <h3><%= comment.user.name %>: <span class='comment-content'><%= comment.text %></span></h3>
+        <% if can? :manage, comment %>
+    <%= button_to "Delete", comment_destroy_path(comment.user, comment), method: :delete, class: "btn btn-danger" %>
+  <% end %>
       </div>
     <% end %>
   </div>
