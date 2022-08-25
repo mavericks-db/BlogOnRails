@@ -5,9 +5,9 @@ class User < ApplicationRecord
   # :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable, :confirmable,
          :recoverable, :rememberable, :validatable
-  has_many :comments
-  has_many :posts
-  has_many :likes
+  has_many :comments, dependent: :destroy
+  has_many :posts, dependent: :destroy
+  has_many :likes, dependent: :destroy
 
   def recent_3_posts
     posts.includes(:user).limit(3).order(created_at: :desc)
@@ -15,6 +15,10 @@ class User < ApplicationRecord
 
   validates :name, presence: true
   validates :posts_counter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
+
+  def admin?
+    is? :admin
+  end
 
   private
 
@@ -24,5 +28,11 @@ class User < ApplicationRecord
 
   def init
     self.posts_counter ||= 0
+  end
+
+  ROLES = %i[admin default].freeze
+
+  def is?(assigned_role)
+    role == assigned_role.to_s
   end
 end

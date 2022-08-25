@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout' }
+  delete 'users/:user_id/posts/:post_id', to: 'posts#destroy', as: 'post_destroy'
   post 'users/:user_id/posts/:post_id/create_like', to: 'likes#create', as: 'like_create'
   get 'users/:user_id/:post_id/new_comment', to: 'comments#new', as: 'comment_new'
   post 'users/:user_id/:post_id/create_comment', to: 'comments#create', as: 'comment_create'

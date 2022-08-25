@@ -9,7 +9,7 @@
 
 p "Seeding..."
 users = User.create([{name: 'Mavericks', photo: 'https://picsum.photos/200/300', bio: 'Teacher from Mexico.',
-posts_counter: 0, email: 'mavericks@gmail.com', password: '123456'},
+posts_counter: 0, email: 'mavericks@gmail.com', password: '123456', role: 'admin'},
 {name: 'Lilly', photo: 'https://picsum.photos/300/200', bio: 'Teacher from Poland.', posts_counter: 0,
 email: 'lilly@gmail.com', password: '123456'}])
 
