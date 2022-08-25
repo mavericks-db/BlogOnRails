@@ -33,7 +33,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:post_id])
     @post.destroy
     respond_to do |format|
-      format.html { redirect_to user_posts_path(user: @post.user), notice: 'Post was successfully destroyed.' }
+      format.html { redirect_to user_posts_path(user: @post.user), notice: 'Post was successfully deleted.' }
     end
     @post.update_posts_counter
   end
