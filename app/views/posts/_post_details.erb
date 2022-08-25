@@ -10,20 +10,4 @@
   </div>
 </div>
 
-<% if comments.any? %>
-  <div class='comments-list'>
-    <% comments.each do |comment| %>
-      <div class='comment-card'>
-        <h3><%= comment.user.name %>: <span class='comment-content'><%= comment.text %></span></h3>
-      </div>
-    <% end %>
-  </div>
-<% end %>
-
-<% if comments.empty? %>
-  <div class='comments-list'>
-    <div class='comment-card'>
-      <h3>There are no comments for this post!</h3>
-    </div>
-  </div>
-<% end %>
+<%= render partial: 'comments/comment_card', locals: { comments: post.comments } %>

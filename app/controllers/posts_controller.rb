@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  load_and_authorize_resource
+
   def show
     @post = Post.includes(:user).find(params[:post_id])
   end
@@ -19,10 +21,19 @@ class PostsController < ApplicationController
     @post.comments_counter = 0
     respond_to do |format|
       if @post.save
-        format.html { redirect_to user_posts_path(user: @post.user), notice: 'Post was successfully created.' }
+        format.html { redirect_to user_path(current_user.id), notice: 'Post was successfully created.' }
       else
         format.html { render :new, alert: 'Post was not created.' }
       end
+    end
+    @post.update_posts_counter
+  end
+
+  def destroy
+    @post = Post.find(params[:post_id])
+    @post.destroy
+    respond_to do |format|
+      format.html { redirect_to user_posts_path(user: @post.user), notice: 'Post was successfully deleted.' }
     end
     @post.update_posts_counter
   end

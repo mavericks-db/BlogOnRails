@@ -73,7 +73,9 @@ group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
 
-  gem 'bullet', require: true
+  gem 'letter_opener_web'
 end
 
+gem 'cancancan'
 gem 'devise'
+gem 'faker'
