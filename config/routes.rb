@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout' }
+  devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout', registration: 'signup' },
+  controllers: { sessions: 'users/sessions', registrations: 'users/registrations' }
+
   delete 'users/:user_id/posts/:post_id', to: 'posts#destroy', as: 'post_destroy'
   delete 'users/:user_id/posts/:post_id/comments/:comment_id', to: 'comments#destroy', as: 'comment_destroy'
   post 'users/:user_id/posts/:post_id/create_like', to: 'likes#create', as: 'like_create'
@@ -11,6 +13,17 @@ Rails.application.routes.draw do
   get 'users/:user_id/posts', to: 'posts#index', as: 'user_posts'
   get 'users/:user_id', to: 'users#show', as: 'user'
   get 'users', to: 'users#index', as: 'users'
+
+  # api routes
+  namespace :api, defaults: {format: :json} do
+    namespace :v1 do
+      resources :users, only: [:index,:show] do
+        resources :posts, only: [:index, :show] do
+          resources :comments, only: [:index, :create]
+        end
+      end
+    end
+  end
 
   root 'users#index'
   if Rails.env.development?

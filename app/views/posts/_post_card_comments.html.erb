@@ -1,2 +1,2 @@
 <%= render partial: 'posts/post_card', locals: { post: post } %>
-<%= render partial: 'comments/comment_card', locals: { user: user, post: post } %>
+<%= render partial: 'comments/comment_card', locals: { user: current_user, post: post } %>
