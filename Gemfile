@@ -49,9 +49,9 @@ gem 'bootsnap', require: false
 # gem "image_processing", "~> 1.2"
 
 gem 'cancancan'
-gem 'faker'
 gem 'devise'
 gem 'devise-jwt'
+gem 'faker'
 gem 'rack-cors'
 
 group :development, :test do
