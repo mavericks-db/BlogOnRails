@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout', registration: 'signup' },
-  controllers: { sessions: 'sessions', registrations: 'registrations' }
+  controllers: { sessions: 'users/sessions', registrations: 'users/registrations' }
 
   delete 'users/:user_id/posts/:post_id', to: 'posts#destroy', as: 'post_destroy'
   delete 'users/:user_id/posts/:post_id/comments/:comment_id', to: 'comments#destroy', as: 'comment_destroy'

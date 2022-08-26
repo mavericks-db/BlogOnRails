@@ -12,7 +12,7 @@ class Api::V1::CommentsController < ApplicationController
   def create
     @user = User.find(params[:user_id])
     @post = @user.posts.find(params[:post_id])
-    @comment = @post.comments.create(text: comment_parameters[:text], author_id: @user.id, post_id: @post.id)
+    @comment = @post.comments.create(text: comment_parameters[:text], user_id: @user.id, post_id: @post.id)
 
     if @comment.save
       respond_to do |format|
