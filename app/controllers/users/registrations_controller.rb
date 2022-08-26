@@ -14,6 +14,6 @@ class RegistrationsController < Devise::SessionsController
   end
 
   def register_failed
-    render json: { message: "Something went wrong." }
+    render json: { message: 'Something went wrong.' }
   end
 end
