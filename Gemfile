@@ -55,13 +55,14 @@ gem 'faker'
 gem 'rack-cors'
 gem 'rswag'
 gem 'rake'
+gem 'rspec-rails'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri mingw x64_mingw]
   gem 'rails-controller-testing'
   # The RSpec testing framework
-  gem 'rspec-rails'
+  # gem 'rspec-rails'
 
   # Capybara, the library that allows us to interact with the browser using Ruby
   gem 'capybara'
